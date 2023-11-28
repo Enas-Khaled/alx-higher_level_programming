@@ -1,6 +1,6 @@
-class LockedClass:
-    def __setattr__(self, attr, value):
-        if not hasattr(self, 'first_name') and attr != 'first_name':
-            raise AttributeError(f"Cannot add attribute '{attr}' to instance of LockedClass")
-        super().__setattr__(attr, value)
+#!/usr/bin/python3
+""" Locked class """
 
+class LockedClass:
+    """ No att in locked class"""
+    __slots__ = ["first_name"]
