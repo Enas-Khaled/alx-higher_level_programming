@@ -2,7 +2,7 @@
 """ Write in txt file """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """append txt"""
 
     with open(filename, 'a', encoding="utf-8") as f:
