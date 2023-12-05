@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """ read file """
-    with open(filename , encoding='utf-8') as file_n:
+    with open(filename, encoding='utf-8') as file_n:
         print(file_n.read(), end="")
