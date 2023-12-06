@@ -30,4 +30,4 @@ class Student:
         """reload fron json"""
         for key, value in json.items():
             if key in self.__dict__:
-                self.__dict__.[key] = value
+                self.__dict__[key] = value
