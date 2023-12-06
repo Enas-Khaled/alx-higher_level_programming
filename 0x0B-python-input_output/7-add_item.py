@@ -10,7 +10,7 @@ argum = list(sys.argv[1:])
 
 try:
     old_data = load_from_json_file('add_item.json')
-except:
+except Exception:
     old_data = []
 
 old_data.extend(argum)
