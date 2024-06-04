@@ -1,16 +1,16 @@
-#!/usr/bin/nodei
+#!/usr/bin/node
 const request = require('request');
 
 // Function to get movie details by ID
 function getMovieCharacters(movieId) {
   const url = `https://swapi.dev/api/films/${movieId}/`;
-
+  
   request(url, (error, response, body) => {
     if (error) {
       console.error('Error fetching movie details:', error);
       return;
     }
-
+    
     if (response.statusCode === 200) {
       const movie = JSON.parse(body);
       const characterUrls = movie.characters;
@@ -21,7 +21,7 @@ function getMovieCharacters(movieId) {
             console.error('Error fetching character details:', error);
             return;
           }
-
+          
           if (response.statusCode === 200) {
             const character = JSON.parse(body);
             console.log(character.name);
