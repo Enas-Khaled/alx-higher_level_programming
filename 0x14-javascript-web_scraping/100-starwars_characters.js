@@ -2,7 +2,7 @@
 const request = require('request');
 
 // Function to get movie details by ID
-function getMovieCharacters (movieId) {
+function getMovieCharacters(movieId) {
   const url = `https://swapi.dev/api/films/${movieId}/`;
 
   request(url, (error, response, body) => {
@@ -36,7 +36,7 @@ function getMovieCharacters (movieId) {
   });
 }
 
-// Get the movie ID from the command line arguments
+// Replace with the desired movie ID
 const movieId = process.argv[2];
 if (!movieId) {
   console.error('Please provide a movie ID as the first argument.');
